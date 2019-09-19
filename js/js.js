@@ -30,10 +30,12 @@ escribe_reseña.addEventListener("click", function(){
   let new_html = ''
 
   $(data).find("comment").each(function(event) {
+        let stars = $("input[name='rating']:checked").val()
+        console.log(stars)
         new_html += `
+        getStarsSpans(stars)
         <tr>
           <td>${$(this).find("name").text()}</td>
-          <td">${$(this).find("stars").text()}</td>
           <td>${$(this).find("date").text()}</td>
           <td>${$(this).find("text").text()}</td>
         </tr>
