@@ -31,7 +31,6 @@ escribe_reseña.addEventListener("click", function(){
 
   $(data).find("comment").each(function(event) {
         let stars = $("input[name='rating']:checked").val()
-        console.log(stars)
         new_html += `
         getStarsSpans(stars)
         <tr>
